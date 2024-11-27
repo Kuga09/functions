@@ -1,34 +1,43 @@
 s=input()
-a=list(s)
-
-if len(s)!=3:
-    a.remove(s[2])
-    a.remove(s[4])
-opertation=s[2]
-
+for i in s: 
+    if i == '+':
+        opertation=i
+        s=s.split('+')
+    elif i == '-':
+        opertation=i
+        s=s.split('-')
+    elif i == '*':
+        opertation=i
+        s=s.split('*')
+    elif i == '/':
+        opertation=i
+        s=s.split('/')   
+x=int(s[0])
+y=int(s[1])
 def add(a,b):
-    result=int(a)+int(b)
+    result=a+b
     print(result)
 
 def subtract(a,b):
-    result=int(a)-int(b)
+    result=a-b
     print(result)
 
 def multyply(a,b):
-    result=int(a)*int(b)
+    result=a*b
     print(result)
 
 def devide(a,b):
-    result=int(a)/int(b)
+    result=a/b
     print(result)
 
 match opertation:
     case '+':
-        add(s[1],s[3])
+        add(x,y)
     case '-':
-        subtract(s[1],s[3])
+        subtract(x,y)
     case '*':
-        multyply(s[1],s[3])
+        multyply(x,y)
     case '/':
-        devide(s[1],s[3])
-
+        devide(x,y)
+    case _:
+        print('Ошибка ввода')
