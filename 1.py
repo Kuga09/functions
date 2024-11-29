@@ -1,4 +1,5 @@
 s=input()
+opertation='Error'
 for i in s: 
     if i == '+':
         opertation=i
@@ -40,4 +41,4 @@ match opertation:
     case '/':
         devide(x,y)
     case _:
-        print('Ошибка ввода')
+        print(opertation)
