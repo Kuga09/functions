@@ -10,6 +10,8 @@ def combinations(lst):
     return rest_combinations + [[lst[0]] + comb for comb in rest_combinations]
 
 # Пример использования
-lst = [1, 2, 3, 4]
+inpt=input()
+inpt=inpt.split()
+lst = list(inpt)
 result = combinations(lst)
 print(result)
